@@ -1,0 +1,221 @@
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+  }
+  
+  html {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav {
+    display: flex;
+    padding: .5rem 1rem;
+    background-color: var(--secondary-color);
+    place-items: center;
+    position: fixed;
+    width: 98vw;
+  }
+  
+  nav h1 {
+    margin-left: 2%;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: var(--primary-color);
+  }
+  
+  nav div {
+    margin-left: auto;
+    margin-right: 2%;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  #welcome-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #welcome-section h1, #welcome-section p {
+    margin: .3rem;
+  }
+  
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding-top: 3rem;
+    padding-bottom: 1.3rem;
+  }
+  
+  #projects h1 {
+    text-align: center;
+  }
+  
+  #projects hr {
+    border: .1rem solid var(--primary-color);
+    width: 75%;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  
+  #each-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .project-tile {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 20rem;
+    background: #ffffff50;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: var(--primary-color);
+  }
+  
+  .project-tile div {
+    display: flex;
+    place-items: center;
+  }
+  
+  .project-tile img {
+    width: 100%;
+  }
+  
+  .project-title:before {
+    content: "< ";
+    transition: .5s;
+    opacity: 0;
+  }
+  
+  .project-title:after {
+    content: " />";
+    transition: .5s;
+    opacity: 0;
+  }
+  
+  .project-tile:hover .project-title:before {
+    opacity: 1;
+    transition: .5s;
+  }
+  
+  .project-tile:hover .project-title:after {
+    opacity: 1;
+    transition: .5s;
+  }
+  
+  .project-tile:active .project-title:before {
+    opacity: 1;
+    transition: .5s;
+  }
+  
+  .project-tile:active .project-title:after {
+    opacity: 1;
+    transition: .5s;
+  }
+  
+  #profile {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
+  }
+  
+  #profile div h1, #profile div p {
+    margin: .3rem;
+  }
+  
+  #links {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    gap: 1.3rem;
+    transition: .3s;
+  }
+  
+  #profile a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size:1.4rem;
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: right;
+    padding: 0rem 1rem;
+  }
+  
+  footer p{
+    margin: .5rem 0;
+  }
+  
+  footer a {
+    margin: 0;
+    text-decoration: none;
+    color: orange;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-size: 1.5rem;
+  }
+  
+  @media screen and (max-width: 600px) {
+    html {
+      font-size: 16px;
+    }
+    nav div{
+      margin-right: 2rem;
+    }
+    #links {
+      flex-direction: column;
+      transition: .3s;
+    }
+    #projects {
+      padding-top: 5rem;
+    }
+  }
+  
+  
